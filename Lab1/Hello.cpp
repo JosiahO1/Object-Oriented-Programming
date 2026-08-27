@@ -1,5 +1,5 @@
 /***
- * {short Description of the lab}
+Coding Assignmen 1 - Setup
  ***/
 
 
@@ -12,4 +12,3 @@
     printf("Hello World again! \n");
     return 0;
  }
- 
