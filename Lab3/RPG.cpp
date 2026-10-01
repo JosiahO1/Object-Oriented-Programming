@@ -36,8 +36,6 @@ void RPG::setHitsTaken(int new_hits){
 * @return false : player is unalive
 */
 bool RPG::isAlive() const{
-    if(hits_taken < MAX_HITS_TAKEN){
-        return true;
-    }
-    return false;
+    return hits_taken < MAX_HITS_TAKEN;
 }
+
