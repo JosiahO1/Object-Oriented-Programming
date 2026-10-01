@@ -17,14 +17,17 @@ int main(){
 
 
     //CALL setHitsTaken() on either p1 and p2
-    p1.setHitsTaken(2);
+    p1.setHitsTaken(3);
 
 
 
-    cout<<"\nP2 hits taken" << p2.getHitsTaken();
     //PRINT out the hits_taken
+    cout<<"\nP1 hits taken " << p1.getHitsTaken() << endl;
+    cout<<"\nP2 hits taken " << p2.getHitsTaken() << endl;
 
-    cout<<"0 is dead, 1 is alive\n";
+
+
+    cout<<"\n0 is dead, 1 is alive\n" << endl;
     //CALL isAlive() on both p1 and p2
     cout<<"P1 " << p1.isAlive()<<endl;
     cout<<"P2 " << p2.isAlive()<<endl;
