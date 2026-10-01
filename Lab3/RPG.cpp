@@ -1,5 +1,6 @@
 //RPG.cpp
 #include "RPG.h"
+using namespace std;
 
 RPG::RPG(){
     name = "NPC";
@@ -39,3 +40,22 @@ bool RPG::isAlive() const{
     return hits_taken < MAX_HITS_TAKEN;
 }
 
+string RPG::getName() const{
+    return name;
+}
+
+int RPG::getHitsTaken() const{
+    return hits_taken;
+}
+
+float RPG::getLuck() const{
+    return luck;
+}
+
+float RPG::getexp() const{
+    return exp;
+}
+
+int RPG::getLevel() const{
+    return level;
+}
