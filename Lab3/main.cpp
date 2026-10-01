@@ -21,13 +21,13 @@ int main(){
 
 
 
-    cout<<"\nP2 hits taken" + p2.getHitsTaken();
+    cout<<"\nP2 hits taken" << p2.getHitsTaken();
     //PRINT out the hits_taken
 
     cout<<"0 is dead, 1 is alive\n";
     //CALL isAlive() on both p1 and p2
-    cout<<"P1 " + p1.isAlive();
-    cout<<"P2 " + p2.isAlive();
+    cout<<"P1 " << p1.isAlive()<<endl;
+    cout<<"P2 " << p2.isAlive()<<endl;
 
     return 0;
 }
