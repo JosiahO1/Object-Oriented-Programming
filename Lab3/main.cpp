@@ -8,11 +8,11 @@ int main(){
     RPG p2 = RPG();
 
     printf("%s Current Stats\n", p1.getName().c_str());
-    printf("Hits Taken: %i\t Luck: %f\t Exp: %f\t Level: %i\n", p1.getHitsTaken(), p1.getLuck(), p1.getexp(), p1.getLevel());
+    printf("Hits Taken: %i\t Luck: %f\t Exp: %f\t Level: %i\n\n", p1.getHitsTaken(), p1.getLuck(), p1.getexp(), p1.getLevel());
 
     //PRINT the same for p2
     printf("%s Current Stats\n", p2.getName().c_str());
-    printf("Hits Taken: %i\t Luck: %f\t Exp: %f\t Level: %i\n", p2.getHitsTaken(), p2.getLuck(), p2.getexp(), p2.getLevel());
+    printf("Hits Taken: %i\t Luck: %f\t Exp: %f\t Level: %i\n\n", p2.getHitsTaken(), p2.getLuck(), p2.getexp(), p2.getLevel());
 
 
 
