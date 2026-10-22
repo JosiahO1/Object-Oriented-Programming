@@ -68,3 +68,47 @@ Game::Game() {
     winner -> updateExpLevel();
     printf("%s won against %s\n", winner->getName().c_str(), loser->getName().c_str());
 }
+
+/**
+ * @brief calls slectPlayer() twice to get 2 players at random. If the players are redundant
+ * make a recursive call to battleROund() and return.
+ * Run a round of hits across player1 and player2 until only 1 is alive
+ * Call endRound() to highlight who won and update stats
+ */
+
+ void Game::battleRound(){
+    //Call selectPlayer() twice and assign the values to playerIndex1 and player Index2
+    int playerIndex1 = selectPlayer();
+    int playerIndex2 = selectPlayer();
+
+    //if playerIndex1 and playerIndex2 are the same, call battleRound() again and 
+    //return within the if-statement
+
+    if(playerIndex1 == playerIndex2){
+        battleRound();
+        return;
+    }
+
+    //Create two RPG * called player 1 and player2 using players[playerIndex...]
+    RPG* player1 = players[playerIndex1];
+    RPG* player2 = players[playerIndex2];
+
+    //while both players are alive call player1->attack(player2) and vice versa
+    while(player1->isAlive() && player2->isAlive()){
+        player1->attack(player2);
+        if(player2->isAlive()){
+            player2->attack(player1);
+        }
+    }
+
+    //Outside of the while loop, identify which player is alive
+    //and call endRound() with the correct respective players.
+    if(player1->isAlive()){
+        endRound(player1, player2, playerIndex2);}
+        else{
+            endRound(player2, player1, playerIndex1);
+        }
+
+ }
+
+ 
