@@ -111,4 +111,13 @@ Game::Game() {
 
  }
 
- 
+ /**
+  * @brief Runs battleRound() until there is only 1 player alive
+  * Remember that endRound() shrinks the size of live_players
+  * 
+  */
+ void Game::gameLoop(){
+    while(live_players.size() > 1){
+        battleRound();
+    }
+ }
