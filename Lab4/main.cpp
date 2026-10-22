@@ -15,7 +15,7 @@ int main(){
     gamers.generatePlayers(num_players);
 
     //Call gameLoop()
-    gamers..Loop();
+    gamers.Loop();
 
     //Call printFinalResults()
     gamers.printFinalResults();
