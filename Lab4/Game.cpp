@@ -121,3 +121,19 @@ Game::Game() {
         battleRound();
     }
  }
+/**
+ * @brief Calls printStats on all the players
+ * 
+ */
+void Game::printFinalResults(){
+    for(int i=0; i<players.size(); i++){
+        players[i]->printStats();
+    }
+}
+
+/**
+ * @brief Destroy the Game:: Game object
+ * 
+ */
+Game::~Game(){}
+
