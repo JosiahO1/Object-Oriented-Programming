@@ -90,6 +90,21 @@ void RPG::attack(RPG* opponent){
 
 
     }
+/**
+ * @brief Prints in the format:
+ * "Name: NPC_X      Hits Taken: X     Luck: 0.X00000     Exp: X0.00000000      Level:X      Status: Alive or Dead"
+ */
+void RPG::printStats(){
+    printf("Name:  %s\t Hits Taken: %i\t Luck: %f\t Exp: %f\t Level: %i\t Status: %s\n", getName().c_str(), getHitsTaken(), getLuck(), getexp(), getLevel(), isAlive()?"Alive":"Dead");
+}
+
+
+/**
+ * @brief Destory RPG::RPG object
+ * Already completed
+ */
+
+RPG::~RPG() {}
 
 };
 #endif
