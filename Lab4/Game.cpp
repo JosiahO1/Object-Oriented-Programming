@@ -3,6 +3,7 @@
 
 
 
+
 Game::Game() {
 }
 
@@ -48,3 +49,22 @@ Game::Game() {
     return selectedIndex;
 
  }
+
+ /**
+  * @brief Resets winner's hits_taken to 0.
+  * Removes the loser from the live_players.
+  * Calls updateExpLevel() for the winner
+  * prints the structure "NPC_X won against NPC_Y"
+  * 
+  * @param winner: pointer to RPG winner
+  * @param loser: pointer to RPG loser
+  * @param loserIndex: int index of loser, so that it can be removed from
+  *   live_players
+  */
+
+  void Game::endRound(RPG* winner, RPG* loser, int loserIndex){
+    winner -> setHitsTaken(0);
+    live_players.erase(loserIndex);
+    winner -> updateExpLevel();
+    printf("%s won against %s\n", winner->getName().c_str(), loser->getName().c_str());
+}
