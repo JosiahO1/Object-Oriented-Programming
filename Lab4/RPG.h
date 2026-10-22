@@ -14,9 +14,15 @@ class RPG {
         RPG();
         RPG(string name, int hits_taken, float luck, float exp, int level);
 
+
         //mutators
         bool isAlive() const;
         void setHitsTaken(int new_hits);
+        void setName(string name);
+        void updateExpLevel();
+        void attack(RPG* opponent);
+        void printStats();
+        ~RPG();
 
         //accessors
         string getName() const;
@@ -34,7 +40,7 @@ class RPG {
             float luck;
             float exp;
             int level;
-
+};
 
 /*********EXTENDED FUNCTION ********************/
 /**
@@ -45,7 +51,7 @@ class RPG {
  
 void RPG::setName(string name){
     this->name = name;
-}  
+}
 
  /**
   * @brief increase RPG's experince by 50
@@ -106,7 +112,7 @@ void RPG::printStats(){
 
 RPG::~RPG() {}
 
-};
+
 #endif
 
 
