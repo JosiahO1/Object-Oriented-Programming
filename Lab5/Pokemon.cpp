@@ -41,7 +41,7 @@ Pokemon::Pokemon(){
     cout<<"...\n";
  }
 
- void Pokemon:printStats(){
+ void Pokemon::printStats(){
     printf("Name: %s\t HP: %i\t DEF: %i\t ATT: %i\t TYPE: ", name.c_str(), hp, defense, attack);
     cout<<"Type :";
     for(int i = 0; i < type.size(); i++){
