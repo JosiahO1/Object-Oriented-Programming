@@ -32,3 +32,20 @@ Pokemon::Pokemon(){
     type = type;
     cout<< "Overloaded Constructor (Pokemon) \n";
  }
+
+ /**
+  * @brief says whatever this pokemon noramlly says
+  * 
+  */
+ void Pokemon::speak(){
+    cout<<"...\n";
+ }
+
+ void Pokemon:printStats(){
+    printf("Name: %s\t HP: %i\t DEF: %i\t ATT: %i\t TYPE: ", name.c_str(), hp, defense, attack);
+    cout<<"Type :";
+    for(int i = 0; i < type.size(); i++){
+        cout<<type[i]<<" ";
+    }
+    cout<<endl;
+ }
